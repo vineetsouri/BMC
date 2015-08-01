@@ -18,6 +18,7 @@
 #  provider               :string
 #  uid                    :string
 #  image                  :string
+#  name                   :string
 #
 
 require 'test_helper'
