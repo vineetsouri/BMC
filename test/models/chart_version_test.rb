@@ -1,8 +1,12 @@
 # == Schema Information
 #
-# Table name: charts
+# Table name: chart_versions
 #
 #  id                     :integer          not null, primary key
+#  chart_id               :integer
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  counter                :integer
 #  title                  :string
 #  description            :text
 #  customer_segments      :text
@@ -14,21 +18,12 @@
 #  key_partnerships       :text
 #  cost_structure         :text
 #  revenue_streams        :text
-#  owner_id               :integer
-#  created_at             :datetime         not null
-#  updated_at             :datetime         not null
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+require 'test_helper'
 
-one:
-  title: MyString
-  description: MyText
-  customer_segment: MyText
-  owner_id: 
-
-two:
-  title: MyString
-  description: MyText
-  customer_segment: MyText
-  owner_id: 
+class ChartVersionTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

@@ -1,0 +1,33 @@
+<header>
+  <div id="brand-pic-container" class="header-dropdown-trigger pull-left" data-target="#brand-details">
+    <%= image_tag "codeastra.png", id: "brand-pic", class: "img-circle" %>
+  </div>
+  <div id="brand-details" class="hidden">
+    <h3>Business Model Canvas</h3>
+    <p>Built with <%= fa_icon "heart" %> by <%= link_to "Code Astra", "http://www.codeastra.com" %></p>
+    <p>
+      Version, Track, Share and Maintain your Business Model using our slick app. This will be free for ever. Please feel free to share with your friends!
+    </p>
+  </div>
+
+  <ol class="breadcrumb">
+    <% unless charts_index_page? %>
+      <li><%= link_to "Home", root_path %></li>
+      <% if @chart_version %>
+        <li><%= link_to @chart.title, chart_path(@chart) %></li>
+        <li><%= @chart_version.title_for_display %></li>
+      <% else %>
+        <li><%= @chart.title %></li>
+      <% end %>
+    <% end %>
+  </ol>
+
+  <div id="profile-pic-container" class="header-dropdown-trigger pull-right" data-target="#user_details">
+    <%= image_tag current_user.image, id: 'profile-pic', class: "img-circle" %>
+  </div>
+  <div id="user_details" class="hidden">
+    <p>Logged in as</p>
+    <h4><%= current_user.name %></h4>
+    <%= link_to fa_icon('sign-out', text: 'Logout'), destroy_user_session_path, method: :delete %>
+  </div>
+</header>

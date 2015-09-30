@@ -1,0 +1,21 @@
+<section id="charts" data-no-turbolink>
+  <h1>My Business Models</h1>
+  <div class="">
+    <div class="flip-container new_chart_container">
+      <div class="flipper">
+        <article class="front chart new_chart">
+          <div class="vcenter">
+            <%= fa_icon "plus-circle", text: "Add New Model" %>
+          </div>
+        </article>
+        <article class='back chart new_chart'>
+          <div class="vcenter">
+            <h2>Add a New Model</h2>
+            <%= render 'charts/form' %>
+          </div>
+        </article>
+      </div>
+    </div>
+    <%= render @charts %>
+  </div>
+</section>

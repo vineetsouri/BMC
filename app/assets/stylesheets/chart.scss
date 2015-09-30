@@ -1,0 +1,122 @@
+#chart {
+  #version_navigation {
+    margin: 25px -15px 0 0;
+  }
+
+  #title, #description {
+    margin-left: -15px;
+
+    .edit_indicator {
+      font-size: 0.8em;
+      margin-left: -1.2em;
+      visibility: hidden;
+      color: lighten($dark-font-color, 10%);
+    }
+
+    &:hover .edit_indicator {
+      visibility: visible;
+    }
+
+    .version_details {
+      font-size: 0.5em;
+      margin-top: 10px;
+    }
+  }
+
+  .canvas-box {
+    border: 1px solid transparent;
+    padding: 15px;
+    position: relative;
+
+    * {
+      margin: 0 0 0 0;
+      font-weight: 300;
+    }
+
+    b, strong {
+      font-weight: 400;
+    }
+
+    h4 {
+      font-size: 1em;
+      margin: 0 0 20px;
+      text-align: right;
+      font-weight: 400;
+    }
+
+    a.modal-trigger {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      color: $dark-font-color;
+      visibility: hidden;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &:hover a.modal-trigger {
+      visibility: visible;
+    }
+
+    ol, ul {
+      padding-left: 20px;
+    }
+  }
+
+  #key_partnerships, #value_propositions, #customer_segments {
+    height: 60vh;
+  }
+
+  #key_activities, #key_resources, #customer_relationships, #channels {
+    height: 30vh;
+    margin: 0 -15px;
+  }
+
+  #cost_structure, #revenue_streams {
+    height: 20vh;
+  }
+
+  #key_partnerships {
+    background-color: lighten(#1abc9c, 30%);
+  }
+
+  #key_activities {
+    background-color: lighten(#3498db, 30%);
+  }
+
+  #key_resources {
+    background-color: lighten(#34495e, 30%);
+  }
+
+  #value_propositions {
+    background-color: lighten(#f39c12, 30%);
+  }
+
+  #customer_relationships {
+    background-color: lighten(#c0392b, 30%);
+  }
+
+  #channels {
+    background-color: lighten(#7f8c8d, 30%);
+  }
+
+  #customer_segments {
+    background-color: lighten(#34495e, 30%);
+  }
+
+  #cost_structure {
+    background-color: lighten(#3498db, 30%);
+  }
+
+  #revenue_streams {
+    background-color: lighten(#c0392b, 30%);
+  }
+
+  .canvas-modal {
+    button.close {
+      color: $dark-font-color;
+    }
+  }
+}

@@ -1,8 +1,9 @@
 @import 'bootstrap-sprockets';
-@import "bootswatch/yeti/variables";
+@import 'bootswatch/yeti/variables';
 @import 'bootstrap';
 @import 'theme';
 @import 'common';
-@import 'charts';
 @import 'home';
-@import "font-awesome";
+@import 'charts';
+@import 'chart';
+@import 'font-awesome';

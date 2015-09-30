@@ -1,3 +1,18 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('#charts .front.new_chart').click ->
+    $('.new_chart_container').addClass('hover')
+
+  $('#charts .back.new_chart form a.cancel').click (ev) ->
+    ev.preventDefault()
+    $('.new_chart_container').removeClass('hover')
+    false
+
+  $('#charts .flip-container.chart-slide').click ->
+    $(@.dataset.target)[0].click()
+
+  $(".best_in_place").best_in_place()
+
+  $("#share-link-trigger").click (ev) ->
+    ev.preventDefault()
+    $('#share-modal').modal('show')
+    false

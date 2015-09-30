@@ -5,7 +5,7 @@
 #  id                     :integer          not null, primary key
 #  title                  :string
 #  description            :text
-#  custiomer_segments     :text
+#  customer_segments      :text
 #  value_propositions     :text
 #  customer_relationships :text
 #  channels               :text
