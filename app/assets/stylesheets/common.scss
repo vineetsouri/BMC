@@ -1,4 +1,71 @@
-.vcenter{
+body {
+  padding-bottom: 65px;
+}
+
+footer {
+  background-color: $dark-bg-color;
+  color: $light-font-color;
+  height: 50px;
+  padding: 0 15px;
+  box-sizing: border-box;
+
+
+  #profile-pic-container, #brand-pic-container {
+    background-color: $dark-bg-color;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease-in;
+
+    &:hover, &.active {
+      background-color: $darker-bg-color;
+    }
+    
+    img {
+      height: 40px;
+      border: 2px solid $light-font-color;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        border-width: 0;
+      }
+    }
+  }
+
+  #user_details, #brand-details {
+    position: absolute;
+    bottom: 50px;
+    max-width: 30em;
+    background-color: $darker-bg-color;
+    color: $light-font-color;
+    padding: 15px 40px;
+
+    a {
+      &, &:hover, &:visited, &:active, &:link {
+        color: $light-font-color;
+        text-decoration: none;
+      }
+
+      .fa {
+        transition: all 0.5s ease-in;
+      }
+
+      &:hover {
+        .fa {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  #user_details {
+    right: 15px;
+  }
+
+  #brand-details {
+    left: 15px;
+  }
+}
+
+.vcenter {
   position: relative;
   top: 50%;
   transform: translateY(-50%);

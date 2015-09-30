@@ -10,7 +10,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
+group :development do
+  gem 'annotate'
+end
 
 
 group :development, :test do
@@ -18,6 +20,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'dotenv-rails', :require => 'dotenv/rails-now'
 end
 
 group :production do
@@ -28,3 +31,6 @@ end
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'font-awesome-rails'
+gem 'devise'
+gem 'omniauth-linkedin'
+gem 'simple_form'
