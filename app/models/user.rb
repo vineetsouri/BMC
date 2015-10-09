@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   devise :rememberable, :trackable, :omniauthable, :omniauth_providers => [:linkedin]
 
   has_many :authored_charts, class_name: Chart.name, foreign_key: :owner_id
-  has_many :chart_subscriptions
+  has_many :chart_subscriptions, dependent: :destroy
   has_many :charts, through: :chart_subscriptions
 
   def self.from_omniauth(auth)
