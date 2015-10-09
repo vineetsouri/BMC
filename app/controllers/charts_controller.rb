@@ -55,7 +55,8 @@ class ChartsController < ApplicationController
   end
 
   def destroy
-    @chart.destroy
+    @chart.delete
+    @chart.save!
     redirect_to root_path, notice: "#{@chart.title} deleted successfully."
   end
 
